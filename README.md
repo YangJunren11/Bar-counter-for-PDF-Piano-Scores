@@ -36,7 +36,7 @@ Pages counted exactly, as found:
 
 | Pages | This network | Counting by rules (`training/count_bars.py`) |
 |---|---|---|
-| Three IMSLP scans counted by eye: Bach BWV 868, Beethoven Op. 101 (Breitkopf), Franck's *Prélude, Aria et Final* | **52 of 55** | 30 of 55 |
+| Three IMSLP scans that I am currently playing: Bach BWV 868, Beethoven Op. 101 (Breitkopf), Franck's *Prélude, Aria et Final* | **52 of 55** | 30 of 55 |
 | AudioLabs v2 real scans held out from training: Beethoven sonatas, the second half of *Winterreise* | **45 of 47** | 9 of 47 |
 | MuseScore engravings of 60 test works, clean and made to look scanned | **487 of 498** | — |
 
