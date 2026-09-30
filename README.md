@@ -1,4 +1,4 @@
-# Grand Staff Bar Counter for PDFs
+# Bar Counter for PDF Piano Scores
 
 Counts the bars on each page of a PDF of piano music, so an app can work out which bar every page
 starts with instead of asking someone to type them all in. It was written for PageTurner, an iPad app
