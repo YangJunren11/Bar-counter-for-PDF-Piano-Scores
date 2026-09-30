@@ -85,18 +85,18 @@ other movements, and its pages are better filled in by hand.
 
 ## How it works
 
-**Size.** Every page is scaled so a staff space (the gap between two staff lines) is 9 pixels,
+Every page is scaled so a staff space (the gap between two staff lines) is 9 pixels,
 measured from the page itself: the commonest step from one black run to the next, down the page's
 columns. So a page reaches the network at the same size whatever its edition, scan or resolution.
 `PDFBarCounter` draws each page twice: at 3 pixels a point to measure it, and again at the size the
 network wants, which keeps engraved scores sharp.
 
-**The network** is a small U-Net, down to 1/32 of the page and back up to 1/4, with tall kernels at
+The network is a small U-Net, down to 1/32 of the page and back up to 1/4, with tall kernels at
 its deepest level, since a barline is known by where it starts and stops across a system. It is
 trained as a CenterNet-style heatmap: a Gaussian at the right end of every bar, halfway down its
 system, learned with a focal loss.
 
-**Two things found on the way.** Core ML runs the network in half precision, whose steps near 1 are
+Core ML runs the network in half precision, whose steps near 1 are
 coarse enough for the top of a peak to come out exactly as high as the cell beside it; counted twice,
 that was a confident bar too many, so `BarCounting.peaks` takes the first of two equal cells. And the
 iOS simulator's GPU gives back nothing but zeros for this network, so `PDFBarCounter` counts on the
