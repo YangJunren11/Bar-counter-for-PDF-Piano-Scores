@@ -1,0 +1,13 @@
+# Built
+.build/
+.swiftpm/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Training data and what is made from it (see README.md, "Training")
+data/
+results/omr/
+# The scans counted by eye are IMSLP's, not ours: only the counts are kept (results/real/truth.json)
+results/real/*/
+results/real/*.pdf
